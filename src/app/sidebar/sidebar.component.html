@@ -1,0 +1,37 @@
+<div id="sidebar">
+
+    <div id="row1">
+        <div id="sidebarheader">
+            <div class="avatarContainer"> <img src="../../assets/avatartwo.png" alt="#"></div>
+            <div class="actionsContainer">
+
+                <img width="30px" src="../../assets/statuss.png" alt="#">
+                <img width="30px" src="../../assets/chatimg.png" alt="#">
+                <img width="25px" src="../../assets/threedotted.png" alt="#">
+            </div>
+        </div>
+        <div id="searchbox"><img width="15px" src="../assets/serchtwo.png" alt="#"><input
+                placeholder="Search or start the new chat" type="search"></div>
+    </div>
+
+    <div id="sidebarContent">
+        <!-- <div id="noConversations">All chats are archieved</div> -->
+        <div class="conversation" *ngFor="let conversation of conversatins">
+            <div class="picture"><img width="30px" src="../../assets/avatartwo.png" alt="#"></div>
+            <div class="content">
+                <div class="conversationheader">
+                    <div class="name">{{conversation.name}}</div>
+                    <div class="time">{{conversation.time}}</div>
+                </div>
+                <div class="message"> <img *ngIf="!conversation.latestMessageRead" width="20px"
+                        src="../../assets/doubleticks.jpg" alt=""> <img *ngIf="conversation.latestMessageRead"
+                        width="20px" src="../../assets/ffff.png" alt="">
+                    {{conversation.latestMessage}}
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
