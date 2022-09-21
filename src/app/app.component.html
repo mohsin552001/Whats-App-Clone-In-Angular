@@ -1,7 +1,17 @@
 <div id="background_header"></div>
 <div id="background_body"></div>
 <div id="chatContainer">
-    <app-sidebar></app-sidebar>
-
+    <app-sidebar (conversationClicked)="onConversationSelected($event)"></app-sidebar>
+    <div id="chat">
+        <div id="chatplaceholder" *ngIf="!conversation">
+            <img src=".././assets/wifiphone.jpeg" alt="#">
+            <h2>keep your phone connected</h2>
+            <p>Whats App connects your phone to sync message. To reduce data <br> usage,connect to your phone to Wi-Fi
+            </p>
+            <div class="sprater"></div>
+            <p>whats app is available for Mac <a href="">Get it here</a></p>
+        </div>
+        <app-chat [conversation]="conversation" *ngIf="conversation"></app-chat>
+    </div>
 </div>
 <router-outlet></router-outlet>

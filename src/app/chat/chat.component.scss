@@ -1,0 +1,131 @@
+#container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: #e7dfdc;
+    flex-direction: column;
+  
+
+    #header {
+      flex-basis: 67px;
+        background-color: #eeeeee;
+        box-shadow: 2px 0px 4px #ccc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .avatarSection{
+            display: flex;
+          
+            .picture{
+min-width: 40px;
+min-height: 40px;
+margin: 0px 10px;
+img{max-width: 100%;
+border-radius: 50px;}
+            }.nameSection{
+flex-grow: 1;
+color: #545454;
+display: flex;
+align-items: center;
+            }
+        }
+        .actionsButtons{
+
+            display: flex;
+            gap: 30px;
+            img{
+                border-radius: 50px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    #body {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+padding: 20px 50px;
+
+flex-direction: column-reverse;
+overflow:auto ;
+        .message{
+       display: flex;
+       align-items: flex-start;
+   color: #767676;
+   flex-direction: column;
+   .messagesContent{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;margin-top: 10px;
+    .time{
+        text-align: right;
+        font-size: 13px;
+        color: #959698;
+        margin-top: 5px;
+    }
+   }
+        &.me{
+            align-items: flex-end;
+            .messagesContent{
+            background-color: #dcf7c5;
+        }
+            
+        }
+        }
+    }
+
+    #footer {
+        min-height: 67px;
+        background-color: #f0eeee;
+        position: relative;
+
+        #smilyIcon {
+            min-height: 50px;
+            display: flex;
+            position: absolute;
+            align-items: center;
+            left: 10px;
+            top: 15px;
+
+            img {
+                border-radius: 50px;
+                cursor: pointer;
+            }
+        }
+
+        #textarea {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+
+            textarea {
+                width: 85%;
+                height: 45px;
+                border: 0px;
+                border-radius: 4px;
+                resize: none;
+                outline: none;
+                padding: 14px;
+                box-sizing: border-box;
+
+            }
+        }
+
+        #micIcon {
+            // min-height: 50px !important;
+            width: 50px;
+
+
+            img {
+                border-radius: 50px;
+                float: right;
+                position: absolute;
+                right: 10px;
+                top: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -16,7 +16,8 @@
 
     <div id="sidebarContent">
         <!-- <div id="noConversations">All chats are archieved</div> -->
-        <div class="conversation" *ngFor="let conversation of conversatins">
+        <div class="conversation" *ngFor="let conversation of conversatins"
+            (click)="conversationClicked.emit(conversation)">
             <div class="picture"><img width="30px" src="../../assets/avatartwo.png" alt="#"></div>
             <div class="content">
                 <div class="conversationheader">

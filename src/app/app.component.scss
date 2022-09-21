@@ -28,5 +28,41 @@
     app-sidebar {
         width: 30%;
         display: block;
+        display: block;
+        height: 100%;
+    }
+
+    #chat {
+        // color: #f7f9fa;
+        flex-grow: 1;
+
+        #chatplaceholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            flex-direction: column;
+
+            h2 {
+                font-size: 35px;
+                font-weight: normal;
+                color: #555555;
+            }
+
+            .sprater {
+                width: 50%;
+                border-top: 1px solid #eaeaea;
+
+                margin: 30px 0px;
+            }
+
+            p {
+                color: rgb(110, 110, 110);
+                text-align: center;
+                line-height: 2
+            }
+
+            ;
+        }
     }
 }
